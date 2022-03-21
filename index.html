@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Project 78</title>
+    </head>
+    <body>
+        <img src = "https://img.freepik.com/free-vector/cute-teddy-polar-bear-friends-greeting-cartoon-doodle-card_40564-503.jpg?size=626&ext=jpg" style = "width: 30%;" id = "family_member_image">
+        <h4 id = "family_member_name"></h4>
+        <button onclick = "update();">Next</button>
+        <script>
+            var image = ["https://img.freepik.com/free-vector/cute-teddy-polar-bear-friends-greeting-cartoon-doodle-card_40564-503.jpg?size=626&ext=jpg", "https://i.pinimg.com/originals/a1/c2/bc/a1c2bc4c83d8d357ae38cd95d7d7093b.jpg", "https://i.pinimg.com/originals/63/17/cb/6317cb36d28357a34e1a507a0bebc0b0.gif", "https://i.pinimg.com/originals/c5/10/28/c51028dfc3743559eee9c01a273c7d55.gif", "https://c.tenor.com/oOD97EHJqQcAAAAd/kikis-delivery-service-ursula.gif", "https://i.pinimg.com/originals/53/66/0b/53660b968e5dac4aa9fa806db123a2cf.png"];
+            var names = ["Family Book", "Anita(Mom)", "Jaya(Dad)", "Caro(My Sister)", "Natania(Me)", "Hades and Persephone(The fish)"];
+            var i = 0; 
+            function update()
+            {
+                i++; 
+                var numbers_of_family_member_in_array = 6
+                if(i > numbers_of_family_member_in_array)
+                {
+                    i = 0;
+                }
+                var updatedImage = image[i]; 
+                var updatedName = names[i]; 
+                document.getElementById("family_member_image").src = updatedImage; 
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
